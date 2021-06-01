@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  /*background-color: antiquewhite;*/
+}
+
+.editor {
+  width: 50%;
+}
+
+.graph {
+  width: 50%;
+}
