@@ -12,11 +12,9 @@ interface EditorProps {
   setCode: (nextCode: string) => void;
   lines: number;
   setLines: (nextLine: number) => void;
-  cacheLines: number;
-  setCacheLines: (nextLines: number) => void;
 }
 
-const Editor = ({code, setCode, lines, setLines, cacheLines, setCacheLines}: EditorProps) => {
+const Editor = ({code, setCode, lines, setLines}: EditorProps) => {
   const spaceLength = 9;
   const spaceTemplate = (totalLength: number, current: number) => {
     const currentLen = String(current).length;
@@ -35,14 +33,16 @@ const Editor = ({code, setCode, lines, setLines, cacheLines, setCacheLines}: Edi
 
   const onPaste = (event: React.ClipboardEvent<HTMLTextAreaElement>) => {
     event.preventDefault();
-    const reg = /[\n]/g;
     const pastedData = event.clipboardData;
     const textData = pastedData?.getData('Text');
     const {target} = event;
     if (target instanceof HTMLTextAreaElement && textData) {
       const newLines = textData.match(/\n/g)?.length! as number | 1;
       setLines(newLines + 1);
-      target.textContent = textData;
+      if (target.selectionEnd - target.selectionStart > 0) {
+        target.setRangeText('', target.selectionStart, target.selectionEnd, 'end');
+      }
+      target.setRangeText(textData, target.selectionStart, target.selectionEnd, 'end');
     }
   }
 
