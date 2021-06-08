@@ -1,4 +1,4 @@
 .number {
-    padding-left: 5px;
-    padding-right: 40px;
+    padding-left: inherit;
+    padding-right: inherit;
 }
