@@ -1,1 +1,1 @@
-- [x] number-lined text editor
+- [x] number-line text editor
