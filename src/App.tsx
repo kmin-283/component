@@ -7,7 +7,7 @@ function App() {
     const [code, setCode] = useState('function helloWorld() {\n' +
       '  console.log(world);\n' +
       '}');
-    const [hasLine, setHasLine] = useState(true);
+    const [hasLine, setHasLine] = useState(false);
     const [placeHolder, setPlaceHolder] = useState('Wait for code...');
   return (
       <div className={styles.container}>

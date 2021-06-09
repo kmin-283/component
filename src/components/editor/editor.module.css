@@ -11,7 +11,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 2px;
+    padding: 0.5rem;
     height: 100%;
     width: 95%;
     color: inherit;
@@ -39,7 +39,7 @@
     position: absolute;
     top: 0;
     left: 4rem;
-    padding: 2px;
+    padding: 0.5rem;
     height: 100%;
     width: 95%;
     color: inherit;
@@ -69,7 +69,9 @@
 }
 .editor {
     left: 0;
-    margin: 2px;
+    margin-top: 1px;
+    margin-left: 1px;
+    padding: 0.5rem;
     border: 0;
     width: 95%;
     box-sizing: inherit;
@@ -94,7 +96,9 @@
 
 .editorNumbered {
     left: 0.75rem;
-    margin: 2px;
+    margin-top: 1px;
+    margin-left: 3px;
+    padding: 0.5rem;
     border: 0;
     width: 95%;
     box-sizing: inherit;
