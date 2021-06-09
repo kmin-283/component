@@ -11,13 +11,13 @@ function App() {
     const [placeHolder, setPlaceHolder] = useState('Wait for code...');
   return (
       <div className={styles.container}>
-          <div className={styles.editor}>
             <p>aasdfsdfsdf</p>
+          <div className={styles.editor}>
               <Editor code={code} setCode={setCode}
                       hasLine={hasLine} placeHolder={placeHolder}
               />
-            <p>asdfsdafsdf</p>
           </div>
+            <p>asdfsdafsdf</p>
       </div>
   );
 }

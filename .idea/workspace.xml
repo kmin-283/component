@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/editor/editor.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editor/editor.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/editor/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editor/editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/editor/lineNumber/lineNumber.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editor/lineNumber/lineNumber.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,9 @@
       <workItem from="1622687284368" duration="24483000" />
       <workItem from="1622798135305" duration="2754000" />
       <workItem from="1622817051861" duration="1000" />
-      <workItem from="1623122142247" duration="27321000" />
+      <workItem from="1623122142247" duration="27403000" />
+      <workItem from="1623154238402" duration="3000" />
+      <workItem from="1623211341437" duration="9787000" />
     </task>
     <servers />
   </component>

@@ -28,16 +28,15 @@ const Editor = ({
     const pre = document.querySelector('pre');
     pre!.innerHTML = highlighted;
     } , []);
+
   const [lines, setLines] = useState(3);
 
   const onPaste = (event: React.ClipboardEvent<HTMLTextAreaElement>) => {
-
-
     const pastedData = event.clipboardData;
     const textData = pastedData?.getData('Text');
     const {target} = event;
     if (target instanceof HTMLTextAreaElement && textData) {
-      if (target.selectionEnd - target.selectionStart > 0) {
+      if (hasLine && target.selectionEnd - target.selectionStart > 0) {
         target.setRangeText('', target.selectionStart, target.selectionEnd, 'end');
       }
       target.setRangeText(textData, target.selectionStart, target.selectionEnd, 'end');
@@ -50,9 +49,11 @@ const Editor = ({
       const highlighted = highlight(target.value, languages.js, 'js');
       const pre = document.querySelector('pre');
       setCode(highlighted);
-      pre!.innerHTML = highlighted;
+      pre!.innerHTML = highlighted + ' ';
+      if (hasLine) {
       const newLines = target.value.match(/\n/g)?.length! as number ?? 1;
       setLines(newLines + 1);
+      }
     }
   }
   const textarea = hasLine ? `${styles.textareaNumbered}` : `${styles.textarea}`;
@@ -61,14 +62,16 @@ const Editor = ({
 
   return (
     <div className={styles.container}>
-      <div className={styles.lineNumber}>
+      {
+        hasLine && <div className={styles.lineNumber}>
         {
-          hasLine && Array.from({length: lines}, (undefined, i) => i)
+          Array.from({length: lines}, (undefined, i) => i)
             .map((v, i) => <LineNumber line={i + 1}/>)
         }
       </div>
+      }
       <textarea className={textarea} onPaste={onPaste} onChange={onChange}
-                placeholder={placeHolder} wrap={"off"} defaultValue={code}>
+                placeholder={placeHolder} defaultValue={code}>
       </textarea>
       <pre className={pre}>
       </pre>

@@ -5,19 +5,17 @@
     text-align: left;
     box-sizing: border-box;
     padding: 0;
-    width: 100%;
-    overflow: hidden;
     font-size: 16px;
 }
 .textarea {
     position: absolute;
-    top: 1px;
+    top: 0;
     left: 0;
     padding: 2px;
     height: 100%;
-    width: 100%;
-    resize: none;
+    width: 95%;
     color: inherit;
+    resize: none;
     overflow: hidden;
     font-size: inherit;
     line-height: inherit;
@@ -34,20 +32,18 @@
     text-rendering: inherit;
     text-transform: inherit;
     white-space: pre-wrap;
-    word-break: keep-all;
-    overflow-wrap: break-word;
-    border-style: none;
+    word-break: break-all;
     background: none;
 }
 .textareaNumbered {
     position: absolute;
-    top: 1px;
-    left: 60px;
+    top: 0;
+    left: 4rem;
     padding: 2px;
     height: 100%;
-    width: 100%;
-    resize: none;
+    width: 95%;
     color: inherit;
+    resize: none;
     overflow: hidden;
     font-size: inherit;
     line-height: inherit;
@@ -64,9 +60,7 @@
     text-rendering: inherit;
     text-transform: inherit;
     white-space: pre-wrap;
-    word-break: keep-all;
-    overflow-wrap: break-word;
-    border-style: none;
+    word-break: break-all;
     background: none;
 }
 .highlight {
@@ -74,13 +68,18 @@
     pointer-events: none;
 }
 .editor {
+    left: 0;
     margin: 2px;
     border: 0;
+    width: 95%;
     box-sizing: inherit;
-    display: block;
+    resize: none;
+    overflow: hidden;
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     font-variant-ligatures: inherit;
     font-weight: inherit;
     letter-spacing: inherit;
@@ -90,19 +89,22 @@
     text-rendering: inherit;
     text-transform: inherit;
     white-space: pre-wrap;
-    word-break: keep-all;
-    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .editorNumbered {
-    left: 20px;
+    left: 0.75rem;
     margin: 2px;
     border: 0;
+    width: 95%;
     box-sizing: inherit;
-    display: block;
+    resize: none;
+    overflow: hidden;
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     font-variant-ligatures: inherit;
     font-weight: inherit;
     letter-spacing: inherit;
@@ -112,12 +114,11 @@
     text-rendering: inherit;
     text-transform: inherit;
     white-space: pre-wrap;
-    word-break: keep-all;
-    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .lineNumber {
-    width: 30px;
+    width: 3rem;
     font-size: inherit;
     line-height: inherit;
     -moz-osx-font-smoothing: grayscale;
@@ -131,9 +132,5 @@
     text-indent: inherit;
     text-rendering: inherit;
     text-transform: inherit;
-    white-space: pre-wrap;
-    word-break: keep-all;
-    overflow-wrap: break-word;
     padding-left: 5px;
-    padding-right: 5px;
 }
